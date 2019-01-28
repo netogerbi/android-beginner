@@ -25,6 +25,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //3º método de inserir logica em elementos
         this.mViewHolder.buttonCalculate.setOnClickListener(this);
 
+        this.clearValues();
+
 //        //2º método de inserir logica em elementos
 //        this.mViewHolder.buttonCalculate.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -41,7 +43,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         int id = v.getId();
         if(id == R.id.button_calculate){
             //logica do botão
-            this.mViewHolder.buttonCalculate.setText("Teste");
+            Double value = Double.valueOf(this.mViewHolder.editValue.getText().toString());//pega a string do elemento e converte em double
+            this.mViewHolder.textDollar.setText(String.format("%.2f", value * 3));
+            this.mViewHolder.textEuro.setText(String.format("%.2f", value * 4));
         }
     }
 
@@ -49,6 +53,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //    public void teste(View view) {
 //        //logica do botão
 //    }
+
+    private void clearValues(){
+        this.mViewHolder.textEuro.setText("");
+        this.mViewHolder.textDollar.setText("");
+    }
 
     private static class ViewHolder{
         EditText editValue;
