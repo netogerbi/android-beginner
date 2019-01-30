@@ -2,19 +2,18 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:textSize="25sp"
-        android:text="@string/valor_em_real"
         android:layout_gravity="center"
-         />
+        android:layout_marginTop="20dp"
+        android:text="@string/valor_em_real"
+        android:textSize="25sp" />
 
     <EditText
         android:id="@+id/edit_value"
@@ -22,44 +21,50 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
+        android:inputType="numberSigned"
         android:paddingTop="10dp"
-        android:textSize="30sp"
         android:textAlignment="center"
-        android:inputType="numberSigned" />
+        android:textSize="30sp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
         android:layout_marginLeft="10dp"
+        android:layout_marginTop="50dp"
         android:text="@string/valor_em_dollar" />
+
     <TextView
         android:id="@+id/text_dollar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
         android:padding="10dp"
-        android:textSize="25sp"
-        android:layout_marginLeft="10dp" />
+        android:textColor="@color/colorPrimary"
+        android:textSize="25sp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
         android:layout_marginLeft="10dp"
+        android:layout_marginTop="50dp"
         android:text="@string/valor_em_euro" />
+
     <TextView
         android:id="@+id/text_euro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
         android:padding="10dp"
-        android:textSize="25sp"
-        android:layout_marginLeft="10dp" />
+        android:textColor="@color/colorPrimary"
+        android:textSize="25sp" />
 
     <Button
         android:id="@+id/button_calculate"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/button_light"
         android:text="@string/calcular" />
 
 
